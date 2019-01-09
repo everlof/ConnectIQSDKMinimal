@@ -7,10 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		C48F466D21E6101E004A2BFF /* ConnectIQ.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = C48F466F21E61046004A2BFF /* ConnectIQ.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		D60D04B8199E546C00870EDC /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = C48F465321E600AC004A2BFF /* main.m */; };
 		C48F464621E600AB004A2BFF /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = C48F464521E600AB004A2BFF /* AppDelegate.m */; };
 		C48F464E21E600AC004A2BFF /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C48F464D21E600AC004A2BFF /* Images.xcassets */; };
-		C48F465421E600AC004A2BFF /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = C48F465321E600AC004A2BFF /* main.m */; };
-		C48F467221E6104B004A2BFF /* ConnectIQ.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = C48F466F21E61046004A2BFF /* ConnectIQ.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		C48F467521E6550E004A2BFF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C48F467421E6550E004A2BFF /* LaunchScreen.storyboard */; };
 /* End PBXBuildFile section */
 
@@ -21,7 +21,7 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				C48F467221E6104B004A2BFF /* ConnectIQ.framework in Embed Frameworks */,
+				C48F466D21E6101E004A2BFF /* ConnectIQ.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -29,13 +29,13 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		C48F466F21E61046004A2BFF /* ConnectIQ.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ConnectIQ.framework; path = "../../../Documents/connectiq-mobile-sdk-ios-1.3/ConnectIQ.framework"; sourceTree = "<group>"; };
 		C48F464121E600AB004A2BFF /* ConnectIQSDKMinimal.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ConnectIQSDKMinimal.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		C48F465221E600AC004A2BFF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C48F465321E600AC004A2BFF /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		C48F464421E600AB004A2BFF /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		C48F464521E600AB004A2BFF /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		C48F464D21E600AC004A2BFF /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
-		C48F465221E600AC004A2BFF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		C48F465321E600AC004A2BFF /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		C48F466F21E61046004A2BFF /* ConnectIQ.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ConnectIQ.framework; path = "../../../Documents/connectiq-mobile-sdk-ios-1.3/ConnectIQ.framework"; sourceTree = "<group>"; };
 		C48F467421E6550E004A2BFF /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -50,6 +50,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		C48F466E21E6103A004A2BFF /* Framework */ = {
+			isa = PBXGroup;
+			children = (
+				C48F466F21E61046004A2BFF /* ConnectIQ.framework */,
+			);
+			name = Framework;
+			path = ConnectIQSDKMinimal;
+			sourceTree = "<group>";
+		};
 		C48F463821E600AB004A2BFF = {
 			isa = PBXGroup;
 			children = (
@@ -80,21 +89,12 @@
 			path = ConnectIQSDKMinimal;
 			sourceTree = "<group>";
 		};
-		C48F466E21E6103A004A2BFF /* Framework */ = {
-			isa = PBXGroup;
-			children = (
-				C48F466F21E61046004A2BFF /* ConnectIQ.framework */,
-			);
-			name = Framework;
-			path = ConnectIQSDKMinimal;
-			sourceTree = "<group>";
-		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
 		C48F464021E600AB004A2BFF /* ConnectIQSDKMinimal */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = C48F465721E600AC004A2BFF /* Build configuration list for PBXNativeTarget "ConnectIQSDKMinimal" */;
+			buildConfigurationList = D60D04DA199E546D00870EDC /* Build configuration list for PBXNativeTarget "ConnectIQSDKMinimal" */;
 			buildPhases = (
 				C48F463D21E600AB004A2BFF /* Sources */,
 				C48F463E21E600AB004A2BFF /* Frameworks */,
@@ -113,7 +113,7 @@
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
-		C48F463921E600AB004A2BFF /* Project object */ = {
+		D60D04A0199E546C00870EDC /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
 				LastUpgradeCheck = 1010;
@@ -131,7 +131,7 @@
 					};
 				};
 			};
-			buildConfigurationList = C48F463C21E600AB004A2BFF /* Build configuration list for PBXProject "ConnectIQSDKMinimal" */;
+			buildConfigurationList = D60D04A3199E546C00870EDC /* Build configuration list for PBXProject "ConnectIQSDKMinimal" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -165,7 +165,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C48F465421E600AC004A2BFF /* main.m in Sources */,
+				D60D04B8199E546C00870EDC /* main.m in Sources */,
 				C48F464621E600AB004A2BFF /* AppDelegate.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -173,7 +173,7 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin XCBuildConfiguration section */
-		C48F465521E600AC004A2BFF /* Debug */ = {
+		D60D04D8199E546D00870EDC /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -232,7 +232,7 @@
 			};
 			name = Debug;
 		};
-		C48F465621E600AC004A2BFF /* Release */ = {
+		D60D04D9199E546D00870EDC /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -285,7 +285,7 @@
 			};
 			name = Release;
 		};
-		C48F465821E600AC004A2BFF /* Debug */ = {
+		D60D04DB199E546D00870EDC /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
@@ -301,10 +301,11 @@
 				PRODUCT_BUNDLE_IDENTIFIER = se.everlof.MiniFromScratch;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = 1;
+				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
 		};
-		C48F465921E600AC004A2BFF /* Release */ = {
+		D60D04DC199E546D00870EDC /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
@@ -320,31 +321,32 @@
 				PRODUCT_BUNDLE_IDENTIFIER = se.everlof.MiniFromScratch;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = 1;
+				WRAPPER_EXTENSION = app;
 			};
 			name = Release;
 		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		C48F463C21E600AB004A2BFF /* Build configuration list for PBXProject "ConnectIQSDKMinimal" */ = {
+		D60D04A3199E546C00870EDC /* Build configuration list for PBXProject "ConnectIQSDKMinimal" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				C48F465521E600AC004A2BFF /* Debug */,
-				C48F465621E600AC004A2BFF /* Release */,
+				D60D04D8199E546D00870EDC /* Debug */,
+				D60D04D9199E546D00870EDC /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		C48F465721E600AC004A2BFF /* Build configuration list for PBXNativeTarget "ConnectIQSDKMinimal" */ = {
+		D60D04DA199E546D00870EDC /* Build configuration list for PBXNativeTarget "ConnectIQSDKMinimal" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				C48F465821E600AC004A2BFF /* Debug */,
-				C48F465921E600AC004A2BFF /* Release */,
+				D60D04DB199E546D00870EDC /* Debug */,
+				D60D04DC199E546D00870EDC /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
-	rootObject = C48F463921E600AB004A2BFF /* Project object */;
+	rootObject = D60D04A0199E546C00870EDC /* Project object */;
 }
