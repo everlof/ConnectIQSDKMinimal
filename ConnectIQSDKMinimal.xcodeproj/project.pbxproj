@@ -8,12 +8,10 @@
 
 /* Begin PBXBuildFile section */
 		C48F464621E600AB004A2BFF /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = C48F464521E600AB004A2BFF /* AppDelegate.m */; };
-		C48F464921E600AB004A2BFF /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C48F464821E600AB004A2BFF /* ViewController.m */; };
-		C48F464C21E600AB004A2BFF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C48F464A21E600AB004A2BFF /* Main.storyboard */; };
-		C48F464E21E600AC004A2BFF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C48F464D21E600AC004A2BFF /* Assets.xcassets */; };
+		C48F464E21E600AC004A2BFF /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C48F464D21E600AC004A2BFF /* Images.xcassets */; };
 		C48F465121E600AC004A2BFF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C48F464F21E600AC004A2BFF /* LaunchScreen.storyboard */; };
 		C48F465421E600AC004A2BFF /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = C48F465321E600AC004A2BFF /* main.m */; };
-		C48F465D21E600DE004A2BFF /* ConnectIQ.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = C48F465A21E600DA004A2BFF /* ConnectIQ.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		C48F466621E60C74004A2BFF /* ConnectIQ.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = C48F466321E60C65004A2BFF /* ConnectIQ.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -23,7 +21,7 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				C48F465D21E600DE004A2BFF /* ConnectIQ.framework in Embed Frameworks */,
+				C48F466621E60C74004A2BFF /* ConnectIQ.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -34,14 +32,11 @@
 		C48F464121E600AB004A2BFF /* ConnectIQSDKMinimal.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ConnectIQSDKMinimal.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C48F464421E600AB004A2BFF /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		C48F464521E600AB004A2BFF /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		C48F464721E600AB004A2BFF /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		C48F464821E600AB004A2BFF /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
-		C48F464B21E600AB004A2BFF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		C48F464D21E600AC004A2BFF /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		C48F464D21E600AC004A2BFF /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		C48F465021E600AC004A2BFF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		C48F465221E600AC004A2BFF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C48F465321E600AC004A2BFF /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		C48F465A21E600DA004A2BFF /* ConnectIQ.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = ConnectIQ.framework; sourceTree = "<group>"; };
+		C48F466321E60C65004A2BFF /* ConnectIQ.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = ConnectIQ.framework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -75,13 +70,10 @@
 		C48F464321E600AB004A2BFF /* ConnectIQSDKMinimal */ = {
 			isa = PBXGroup;
 			children = (
-				C48F465A21E600DA004A2BFF /* ConnectIQ.framework */,
+				C48F466321E60C65004A2BFF /* ConnectIQ.framework */,
 				C48F464421E600AB004A2BFF /* AppDelegate.h */,
 				C48F464521E600AB004A2BFF /* AppDelegate.m */,
-				C48F464721E600AB004A2BFF /* ViewController.h */,
-				C48F464821E600AB004A2BFF /* ViewController.m */,
-				C48F464A21E600AB004A2BFF /* Main.storyboard */,
-				C48F464D21E600AC004A2BFF /* Assets.xcassets */,
+				C48F464D21E600AC004A2BFF /* Images.xcassets */,
 				C48F464F21E600AC004A2BFF /* LaunchScreen.storyboard */,
 				C48F465221E600AC004A2BFF /* Info.plist */,
 				C48F465321E600AC004A2BFF /* main.m */,
@@ -160,8 +152,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				C48F465121E600AC004A2BFF /* LaunchScreen.storyboard in Resources */,
-				C48F464E21E600AC004A2BFF /* Assets.xcassets in Resources */,
-				C48F464C21E600AB004A2BFF /* Main.storyboard in Resources */,
+				C48F464E21E600AC004A2BFF /* Images.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -172,7 +163,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C48F464921E600AB004A2BFF /* ViewController.m in Sources */,
 				C48F465421E600AC004A2BFF /* main.m in Sources */,
 				C48F464621E600AB004A2BFF /* AppDelegate.m in Sources */,
 			);
@@ -181,14 +171,6 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		C48F464A21E600AB004A2BFF /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				C48F464B21E600AB004A2BFF /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		C48F464F21E600AC004A2BFF /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -251,7 +233,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -304,7 +286,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
@@ -320,6 +302,7 @@
 				DEVELOPMENT_TEAM = SMQ3E8Y57T;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
+					"$(SRCROOT)/..",
 					"$(PROJECT_DIR)/ConnectIQSDKMinimal",
 				);
 				INFOPLIST_FILE = ConnectIQSDKMinimal/Info.plist;
@@ -330,7 +313,7 @@
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_BUNDLE_IDENTIFIER = se.everlof.ConnectIQSDKMinimal;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -342,6 +325,7 @@
 				DEVELOPMENT_TEAM = SMQ3E8Y57T;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
+					"$(SRCROOT)/..",
 					"$(PROJECT_DIR)/ConnectIQSDKMinimal",
 				);
 				INFOPLIST_FILE = ConnectIQSDKMinimal/Info.plist;
@@ -352,7 +336,7 @@
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_BUNDLE_IDENTIFIER = se.everlof.ConnectIQSDKMinimal;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};

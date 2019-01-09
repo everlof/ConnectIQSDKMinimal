@@ -1,28 +1,24 @@
-// MIT License
 //
-// Copyright (c) 2018 David Everlöf
+//  AppDelegate.m
+//  ExampleApp
 //
-// Permission is hereby granted, free of charge, to any person obtaining a copy
-// of this software and associated documentation files (the "Software"), to deal
-// in the Software without restriction, including without limitation the rights
-// to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
-// copies of the Software, and to permit persons to whom the Software is
-// furnished to do so, subject to the following conditions:
+//  Copyright (c) 2014 Garmin. All rights reserved.
 //
-// The above copyright notice and this permission notice shall be included in all
-// copies or substantial portions of the Software.
-//
-// THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
-// IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
-// FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
-// AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
-// LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
-// OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
-// SOFTWARE.
-
 
 #import "AppDelegate.h"
 #import <ConnectIQ/ConnectIQ.h>
+
+NSString * const ReturnURLScheme = @"xoxo-9191";
+
+@interface ViewController : UIViewController
+@end
+
+@implementation ViewController
+- (void)viewDidLoad {
+    [super viewDidLoad];
+    [self.view setBackgroundColor:[UIColor redColor]];
+}
+@end
 
 @interface AppDelegate () <IQUIOverrideDelegate>
 
@@ -30,55 +26,58 @@
 
 @implementation AppDelegate
 
-
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
+    // To bypass the default alert dialog shown by the SDK when Garmin Connect
+    // Mobile is not installed, pass an instance of IQUIOverrideDelegate to this
+    // method(such as self in this example). You can then bypass the alert dialog
+    // or provide your own.
+    [[ConnectIQ sharedInstance] initializeWithUrlScheme:ReturnURLScheme uiOverrideDelegate:nil];
+
     // Override point for customization after application launch.
+    self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
+    self.window.rootViewController = [[ViewController alloc] initWithNibName:nil bundle:nil];
+    [self.window makeKeyAndVisible];
 
-    [[ConnectIQ sharedInstance] initializeWithUrlScheme:@"exapp-123456" uiOverrideDelegate:nil];
-
-    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(3 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(2 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
         [[ConnectIQ sharedInstance] showConnectIQDeviceSelection];
     });
 
     return YES;
 }
 
-
 - (void)applicationWillResignActive:(UIApplication *)application {
     // Sent when the application is about to move from active to inactive state. This can occur for certain types of temporary interruptions (such as an incoming phone call or SMS message) or when the user quits the application and it begins the transition to the background state.
-    // Use this method to pause ongoing tasks, disable timers, and invalidate graphics rendering callbacks. Games should use this method to pause the game.
+    // Use this method to pause ongoing tasks, disable timers, and throttle down OpenGL ES frame rates. Games should use this method to pause the game.
 }
-
 
 - (void)applicationDidEnterBackground:(UIApplication *)application {
     // Use this method to release shared resources, save user data, invalidate timers, and store enough application state information to restore your application to its current state in case it is terminated later.
     // If your application supports background execution, this method is called instead of applicationWillTerminate: when the user quits.
 }
 
-
 - (void)applicationWillEnterForeground:(UIApplication *)application {
-    // Called as part of the transition from the background to the active state; here you can undo many of the changes made on entering the background.
+    // Called as part of the transition from the background to the inactive state; here you can undo many of the changes made on entering the background.
 }
-
 
 - (void)applicationDidBecomeActive:(UIApplication *)application {
     // Restart any tasks that were paused (or not yet started) while the application was inactive. If the application was previously in the background, optionally refresh the user interface.
 }
 
-
 - (void)applicationWillTerminate:(UIApplication *)application {
     // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
 }
 
-- (BOOL)application:(UIApplication *)app openURL:(NSURL *)url options:(NSDictionary<UIApplicationOpenURLOptionsKey,id> *)options {
-    NSLog(@"%@", url);
-    // "gcm-ciq://device-select-req?ciqApp&ciqBundle=se.everlof.ConnectIQSDKMinimal&ciqScheme=exapp-123456&ciqSdkVersion=10000"
+- (BOOL)application:(UIApplication *)application openURL:(NSURL *)url sourceApplication:(NSString *)sourceApplication annotation:(id)annotation {
+    NSLog(@"Received URL from '%@': %@", sourceApplication, url);
     return true;
 }
 
-- (BOOL)application:(UIApplication *)application openURL:(NSURL *)url sourceApplication:(NSString *)sourceApplication annotation:(id)annotation {
-    NSLog(@"%@", url);
-    return true;
+- (void)needsToInstallConnectMobile {
+    // If you set self as the UI override delegate in the SDK's initialize method,
+    // this method will be called if the SDK needs to install GCM. In this example,
+    // we'll just bypass the alert view completely and always let the SDK launch
+    // the App Store to GCM's page so the user can install it.
+    [[ConnectIQ sharedInstance] showAppStoreForConnectMobile];
 }
 
 @end
