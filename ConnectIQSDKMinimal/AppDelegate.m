@@ -24,7 +24,7 @@
 #import "AppDelegate.h"
 #import <ConnectIQ/ConnectIQ.h>
 
-@interface AppDelegate ()
+@interface AppDelegate () <IQUIOverrideDelegate>
 
 @end
 

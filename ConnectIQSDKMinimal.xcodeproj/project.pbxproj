@@ -75,6 +75,7 @@
 		C48F464321E600AB004A2BFF /* ConnectIQSDKMinimal */ = {
 			isa = PBXGroup;
 			children = (
+				C48F465A21E600DA004A2BFF /* ConnectIQ.framework */,
 				C48F464421E600AB004A2BFF /* AppDelegate.h */,
 				C48F464521E600AB004A2BFF /* AppDelegate.m */,
 				C48F464721E600AB004A2BFF /* ViewController.h */,
@@ -91,7 +92,6 @@
 		C48F465F21E60397004A2BFF /* Framework */ = {
 			isa = PBXGroup;
 			children = (
-				C48F465A21E600DA004A2BFF /* ConnectIQ.framework */,
 			);
 			path = Framework;
 			sourceTree = "<group>";
