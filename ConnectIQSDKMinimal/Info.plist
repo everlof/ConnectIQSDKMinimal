@@ -22,10 +22,10 @@
 			<key>CFBundleTypeRole</key>
 			<string>None</string>
 			<key>CFBundleURLName</key>
-			<string>se.everlof.ConnectIQSDKMinimal</string>
+			<string>se.everlof.MiniFromScratch</string>
 			<key>CFBundleURLSchemes</key>
 			<array>
-				<string>exapp-123456</string>
+				<string>xxaa-9988</string>
 			</array>
 		</dict>
 	</array>

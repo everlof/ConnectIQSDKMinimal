@@ -3,15 +3,15 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 46;
 	objects = {
 
 /* Begin PBXBuildFile section */
 		C48F464621E600AB004A2BFF /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = C48F464521E600AB004A2BFF /* AppDelegate.m */; };
 		C48F464E21E600AC004A2BFF /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C48F464D21E600AC004A2BFF /* Images.xcassets */; };
-		C48F465121E600AC004A2BFF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C48F464F21E600AC004A2BFF /* LaunchScreen.storyboard */; };
 		C48F465421E600AC004A2BFF /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = C48F465321E600AC004A2BFF /* main.m */; };
-		C48F466621E60C74004A2BFF /* ConnectIQ.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = C48F466321E60C65004A2BFF /* ConnectIQ.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		C48F467221E6104B004A2BFF /* ConnectIQ.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = C48F466F21E61046004A2BFF /* ConnectIQ.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		C48F467521E6550E004A2BFF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C48F467421E6550E004A2BFF /* LaunchScreen.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -21,7 +21,7 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				C48F466621E60C74004A2BFF /* ConnectIQ.framework in Embed Frameworks */,
+				C48F467221E6104B004A2BFF /* ConnectIQ.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -33,10 +33,10 @@
 		C48F464421E600AB004A2BFF /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		C48F464521E600AB004A2BFF /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		C48F464D21E600AC004A2BFF /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
-		C48F465021E600AC004A2BFF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		C48F465221E600AC004A2BFF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C48F465321E600AC004A2BFF /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		C48F466321E60C65004A2BFF /* ConnectIQ.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = ConnectIQ.framework; sourceTree = "<group>"; };
+		C48F466F21E61046004A2BFF /* ConnectIQ.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ConnectIQ.framework; path = "../../../Documents/connectiq-mobile-sdk-ios-1.3/ConnectIQ.framework"; sourceTree = "<group>"; };
+		C48F467421E6550E004A2BFF /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,7 +54,7 @@
 			isa = PBXGroup;
 			children = (
 				C48F464321E600AB004A2BFF /* ConnectIQSDKMinimal */,
-				C48F465F21E60397004A2BFF /* Framework */,
+				C48F466E21E6103A004A2BFF /* Framework */,
 				C48F464221E600AB004A2BFF /* Products */,
 			);
 			sourceTree = "<group>";
@@ -70,22 +70,23 @@
 		C48F464321E600AB004A2BFF /* ConnectIQSDKMinimal */ = {
 			isa = PBXGroup;
 			children = (
-				C48F466321E60C65004A2BFF /* ConnectIQ.framework */,
 				C48F464421E600AB004A2BFF /* AppDelegate.h */,
 				C48F464521E600AB004A2BFF /* AppDelegate.m */,
 				C48F464D21E600AC004A2BFF /* Images.xcassets */,
-				C48F464F21E600AC004A2BFF /* LaunchScreen.storyboard */,
+				C48F467421E6550E004A2BFF /* LaunchScreen.storyboard */,
 				C48F465221E600AC004A2BFF /* Info.plist */,
 				C48F465321E600AC004A2BFF /* main.m */,
 			);
 			path = ConnectIQSDKMinimal;
 			sourceTree = "<group>";
 		};
-		C48F465F21E60397004A2BFF /* Framework */ = {
+		C48F466E21E6103A004A2BFF /* Framework */ = {
 			isa = PBXGroup;
 			children = (
+				C48F466F21E61046004A2BFF /* ConnectIQ.framework */,
 			);
-			path = Framework;
+			name = Framework;
+			path = ConnectIQSDKMinimal;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -120,6 +121,8 @@
 				TargetAttributes = {
 					C48F464021E600AB004A2BFF = {
 						CreatedOnToolsVersion = 10.1;
+						DevelopmentTeam = SMQ3E8Y57T;
+						ProvisioningStyle = Automatic;
 						SystemCapabilities = {
 							com.apple.BackgroundModes = {
 								enabled = 1;
@@ -129,12 +132,11 @@
 				};
 			};
 			buildConfigurationList = C48F463C21E600AB004A2BFF /* Build configuration list for PBXProject "ConnectIQSDKMinimal" */;
-			compatibilityVersion = "Xcode 9.3";
+			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
 			knownRegions = (
 				en,
-				Base,
 			);
 			mainGroup = C48F463821E600AB004A2BFF;
 			productRefGroup = C48F464221E600AB004A2BFF /* Products */;
@@ -151,8 +153,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C48F465121E600AC004A2BFF /* LaunchScreen.storyboard in Resources */,
 				C48F464E21E600AC004A2BFF /* Images.xcassets in Resources */,
+				C48F467521E6550E004A2BFF /* LaunchScreen.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -169,17 +171,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
-
-/* Begin PBXVariantGroup section */
-		C48F464F21E600AC004A2BFF /* LaunchScreen.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				C48F465021E600AC004A2BFF /* Base */,
-			);
-			name = LaunchScreen.storyboard;
-			sourceTree = "<group>";
-		};
-/* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
 		C48F465521E600AC004A2BFF /* Debug */ = {
@@ -302,16 +293,12 @@
 				DEVELOPMENT_TEAM = SMQ3E8Y57T;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
-					"$(SRCROOT)/..",
-					"$(PROJECT_DIR)/ConnectIQSDKMinimal",
+					"/Users/davideverlof/Documents/connectiq-mobile-sdk-ios-1.3",
 				);
 				INFOPLIST_FILE = ConnectIQSDKMinimal/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				OTHER_LDFLAGS = "-ObjC";
-				PRODUCT_BUNDLE_IDENTIFIER = se.everlof.ConnectIQSDKMinimal;
+				PRODUCT_BUNDLE_IDENTIFIER = se.everlof.MiniFromScratch;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = 1;
 			};
@@ -325,16 +312,12 @@
 				DEVELOPMENT_TEAM = SMQ3E8Y57T;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
-					"$(SRCROOT)/..",
-					"$(PROJECT_DIR)/ConnectIQSDKMinimal",
+					"/Users/davideverlof/Documents/connectiq-mobile-sdk-ios-1.3",
 				);
 				INFOPLIST_FILE = ConnectIQSDKMinimal/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				OTHER_LDFLAGS = "-ObjC";
-				PRODUCT_BUNDLE_IDENTIFIER = se.everlof.ConnectIQSDKMinimal;
+				PRODUCT_BUNDLE_IDENTIFIER = se.everlof.MiniFromScratch;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = 1;
 			};

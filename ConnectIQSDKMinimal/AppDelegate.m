@@ -8,7 +8,7 @@
 #import "AppDelegate.h"
 #import <ConnectIQ/ConnectIQ.h>
 
-NSString * const ReturnURLScheme = @"xoxo-9191";
+NSString * const ReturnURLScheme = @"xxaa-9988";
 
 @interface ViewController : UIViewController
 @end
